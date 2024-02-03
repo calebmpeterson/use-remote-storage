@@ -4,58 +4,69 @@ use-remote-storage
 
 ## Table of contents
 
-### Type Aliases
-
-- [NumberParseable](README.md#numberparseable)
-
 ### Functions
 
-- [isNumberParseable](README.md#isnumberparseable)
-
-## Type Aliases
-
-### NumberParseable
-
-Ƭ **NumberParseable**: `number` \| `string` \| `boolean` & { `isNumberParseble`: unique `symbol`  }
-
-A Branded Type for values parseable to number.
-
-#### Defined in
-
-[index.ts:4](https://github.com/VitorLuizC/typescript-library-boilerplate/blob/c48c9c1/src/index.ts#L4)
+- [RemoteStorageProvider](README.md#remotestorageprovider)
+- [useRemoteStorage](README.md#useremotestorage)
+- [useRemoteStorageInstance](README.md#useremotestorageinstance)
 
 ## Functions
 
-### isNumberParseable
+### RemoteStorageProvider
 
-▸ **isNumberParseable**(`value`): value is NumberParseable
-
-Check if value is parseable to number.
+▸ **RemoteStorageProvider**(`props`, `context?`): `ReactNode`
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `value` | `unknown` | An `unknown` value to be checked. |
+| Name | Type |
+| :------ | :------ |
+| `props` | `RemoteStorageProviderProps` |
+| `context?` | `any` |
 
 #### Returns
 
-value is NumberParseable
-
-**`Example`**
-
-```js
-isNumberParseable('AAAA');
-//=> false
-
-isNumberParseable('100');
-//=> true
-
-if (!isNumberParseable(value))
-  throw new Error('Value can\'t be parseable to `Number`.')
-return Number(value);
-```
+`ReactNode`
 
 #### Defined in
 
-[index.ts:24](https://github.com/VitorLuizC/typescript-library-boilerplate/blob/c48c9c1/src/index.ts#L24)
+[src/useRemoteStorage.tsx:75](https://github.com/calebmpeterson/use-remote-storage/blob/11e3436/src/useRemoteStorage.tsx#L75)
+
+___
+
+### useRemoteStorage
+
+▸ **useRemoteStorage**\<`T`\>(`key`): `HookResult`\<`T`\>
+
+#### Type parameters
+
+| Name |
+| :------ |
+| `T` |
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `key` | `string` |
+
+#### Returns
+
+`HookResult`\<`T`\>
+
+#### Defined in
+
+[src/useRemoteStorage.tsx:50](https://github.com/calebmpeterson/use-remote-storage/blob/11e3436/src/useRemoteStorage.tsx#L50)
+
+___
+
+### useRemoteStorageInstance
+
+▸ **useRemoteStorageInstance**(): `RemoteStorage`
+
+#### Returns
+
+`RemoteStorage`
+
+#### Defined in
+
+[src/useRemoteStorage.tsx:38](https://github.com/calebmpeterson/use-remote-storage/blob/11e3436/src/useRemoteStorage.tsx#L38)

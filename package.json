@@ -1,6 +1,6 @@
 {
   "name": "use-remote-storage",
-  "version": "0.0.0",
+  "version": "1.0.1",
   "description": "React hook wrapping the remote-storage library.",
   "cdn": "dist/index.umd.js",
   "main": "dist/index.js",
@@ -55,7 +55,7 @@
   },
   "scripts": {
     "doc": "typedoc src/index.ts",
-    "test": "jest",
+    "test": "jest --passWithNoTests",
     "lint": "eslint \"*/**/*.{ts,js,json}\"",
     "lint:fix": "eslint \"*/**/*.{ts,js,json}\" --fix",
     "build": "rollup --config ./rollup.config.mjs",

@@ -3,6 +3,7 @@
 
 # Built assets
 dist
+types
 
 # Finder's configuration files (Mac).
 .DS_Store

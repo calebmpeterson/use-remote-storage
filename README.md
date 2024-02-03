@@ -1,10 +1,6 @@
 # use-remote-storage
 
-[![Continuous Integrations](https://github.com/calebmpeterson/use-remote-storage/actions/workflows/continuous-integrations.yaml/badge.svg?branch=main)](https://github.com/calebmpeterson/use-remote-storage/actions/workflows/continuous-integrations.yaml)
-[![License](https://badgen.net/github/license/calebmpeterson/use-remote-storage)](./LICENSE)
-[![Package tree-shaking](https://badgen.net/bundlephobia/tree-shaking/use-remote-storage)](https://bundlephobia.com/package/use-remote-storage)
-[![Package minified & gzipped size](https://badgen.net/bundlephobia/minzip/use-remote-storage)](https://bundlephobia.com/package/use-remote-storage)
-[![Package dependency count](https://badgen.net/bundlephobia/dependency-count/reactuse-remote-storage)](https://bundlephobia.com/package/use-remote-storage)
+React hook wrapping the [remote-storage](https://remote.storage/) library.
 
 ## Installation
 
@@ -17,21 +13,25 @@ npm install use-remote-storage --save
 yarn add use-remote-storage
 ```
 
-### Installation from CDN
+## Use
 
-This module has an UMD bundle available through JSDelivr and Unpkg CDNs.
+### Provide the `remote-storage` configuration
 
-```html
-<!-- For UNPKG use the code below. -->
-<script src="https://unpkg.com/use-remote-storage"></script>
+```tsx
+import { RemoteStorageProvider } from 'use-remote-storage';
 
-<!-- For JSDelivr use the code below. -->
-<script src="https://cdn.jsdelivr.net/npm/use-remote-storage"></script>
+<RemoteStorageProvider userId={...} instanceId="my-awesome-app">
+  ...
+</RemoteStorageProvider>
+```
 
-<script>
-  // UMD module is exposed through the "useRemoteStorage" global variable.
-  console.log(useRemoteStorage);
-</script>
+### Read/Write Values
+
+```tsx
+import { useRemoteStorage } from 'use-remote-storage';
+
+// within any functional component
+const { status, value, setValue, refresh } = useRemoteStorage('my-key');
 ```
 
 ## Documentation

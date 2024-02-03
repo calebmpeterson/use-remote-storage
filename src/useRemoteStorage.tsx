@@ -24,10 +24,15 @@ interface RemoteStorageProviderProps extends PropsWithChildren {
 type RefreshCallback = () => void;
 
 type HookResult<T> = {
+  /** The status of the value: loading, success, error */
   status: AsyncStatus;
+  /** The error when status is "error" */
   error?: unknown;
+  /** The value when the status is "success" */
   value: T | undefined;
+  /** Update the value */
   setValue: (value: T) => Promise<void>;
+  /** Refetch the value from the server */
   refresh: RefreshCallback;
 };
 

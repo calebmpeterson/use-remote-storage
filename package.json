@@ -1,0 +1,77 @@
+{
+  "name": "use-remote-storage",
+  "version": "0.0.0",
+  "description": "React hook wrapping the remote-storage library.",
+  "cdn": "dist/index.umd.js",
+  "main": "dist/index.js",
+  "types": "types/index.d.ts",
+  "unpkg": "dist/index.umd.js",
+  "module": "dist/index.esm.js",
+  "jsdelivr": "dist/index.umd.js",
+  "umd:main": "dist/index.umd.js",
+  "files": [
+    "dist/",
+    "types/"
+  ],
+  "exports": {
+    ".": [
+      {
+        "import": "./dist/index.mjs",
+        "require": "./dist/index.cjs",
+        "default": "./dist/index.js"
+      },
+      "./dist/index.js"
+    ]
+  },
+  "peerDependencies": {
+    "@react-hook/async": "^3.1.1",
+    "react": "^18.2.0",
+    "remote-storage": "^1.0.4"
+  },
+  "devDependencies": {
+    "@react-hook/async": "^3.1.1",
+    "@rollup/plugin-terser": "^0.4.3",
+    "@types/eslint": "^8.44.3",
+    "@types/jest": "^29.5.5",
+    "@types/node": "^20.11.16",
+    "@types/prettier": "^3.0.0",
+    "@types/react": "^18.2.52",
+    "@typescript-eslint/eslint-plugin": "^6.7.4",
+    "@typescript-eslint/parser": "^6.7.4",
+    "eslint": "^8.50.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-prettier": "^5.0.0",
+    "jest": "^29.7.0",
+    "prettier": "^3.0.3",
+    "react": "^18.2.0",
+    "remote-storage": "^1.0.4",
+    "rollup": "^3.29.4",
+    "rollup-plugin-typescript2": "^0.36.0",
+    "ts-jest": "^29.1.1",
+    "ts-jest-resolver": "^2.0.1",
+    "typedoc": "^0.25.1",
+    "typedoc-plugin-markdown": "^3.16.0",
+    "typescript": "^5.2.2"
+  },
+  "scripts": {
+    "doc": "typedoc src/index.ts",
+    "test": "jest",
+    "lint": "eslint \"*/**/*.{ts,js,json}\"",
+    "lint:fix": "eslint \"*/**/*.{ts,js,json}\" --fix",
+    "build": "rollup --config ./rollup.config.mjs",
+    "prepublishOnly": "npm run doc && npm run lint && npm run test && npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/calebmpeterson/use-remote-storage.git"
+  },
+  "keywords": [],
+  "author": {
+    "name": "Caleb Peterson"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/calebmpeterson/use-remote-storage/issues"
+  },
+  "homepage": "https://github.com/calebmpeterson/use-remote-storage#readme"
+}

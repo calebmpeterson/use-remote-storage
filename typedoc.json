@@ -1,0 +1,7 @@
+{
+  "out": "./docs",
+  "name": "use-remote-storage",
+  "plugin": ["typedoc-plugin-markdown"],
+  "readme": "none",
+  "tsconfig": "./tsconfig.bundle.json"
+}

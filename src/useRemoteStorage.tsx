@@ -35,9 +35,7 @@ const RemoteStorageContext = createContext<RemoteStorageContextValue | null>(
   null,
 );
 
-export const useRemoteStorage = <T,>(key: string): HookResult<T> => {
-  const keyRef = useRef<string>(key);
-
+export const useRemoteStorageInstance = () => {
   const context = useContext(RemoteStorageContext);
 
   if (!context) {
@@ -46,7 +44,13 @@ export const useRemoteStorage = <T,>(key: string): HookResult<T> => {
     );
   }
 
-  const { remoteStorage } = context;
+  return context.remoteStorage;
+};
+
+export const useRemoteStorage = <T,>(key: string): HookResult<T> => {
+  const keyRef = useRef<string>(key);
+
+  const remoteStorage = useRemoteStorageInstance();
 
   const [{ status, error, value }, load] = useAsync<T>(() => {
     return remoteStorage.getItem(keyRef.current);
@@ -80,11 +84,6 @@ export const RemoteStorageProvider: FC<RemoteStorageProviderProps> = ({
       instanceId,
       serverAddress,
     });
-
-    if (process.env['NODE_ENV'] === 'development') {
-      // @ts-expect-error
-      global.remoteStorage = remoteStorage;
-    }
 
     return { remoteStorage };
   }, [userId, instanceId, serverAddress]);

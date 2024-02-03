@@ -29,7 +29,7 @@ use-remote-storage
 
 #### Defined in
 
-[src/useRemoteStorage.tsx:75](https://github.com/calebmpeterson/use-remote-storage/blob/11e3436/src/useRemoteStorage.tsx#L75)
+[src/useRemoteStorage.tsx:80](https://github.com/calebmpeterson/use-remote-storage/blob/40711fe/src/useRemoteStorage.tsx#L80)
 
 ___
 
@@ -55,7 +55,7 @@ ___
 
 #### Defined in
 
-[src/useRemoteStorage.tsx:50](https://github.com/calebmpeterson/use-remote-storage/blob/11e3436/src/useRemoteStorage.tsx#L50)
+[src/useRemoteStorage.tsx:55](https://github.com/calebmpeterson/use-remote-storage/blob/40711fe/src/useRemoteStorage.tsx#L55)
 
 ___
 
@@ -69,4 +69,4 @@ ___
 
 #### Defined in
 
-[src/useRemoteStorage.tsx:38](https://github.com/calebmpeterson/use-remote-storage/blob/11e3436/src/useRemoteStorage.tsx#L38)
+[src/useRemoteStorage.tsx:43](https://github.com/calebmpeterson/use-remote-storage/blob/40711fe/src/useRemoteStorage.tsx#L43)

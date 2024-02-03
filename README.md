@@ -25,13 +25,22 @@ import { RemoteStorageProvider } from 'use-remote-storage';
 </RemoteStorageProvider>
 ```
 
-### Read/Write Values
+### Read and write values
 
 ```tsx
 import { useRemoteStorage } from 'use-remote-storage';
 
 // within any functional component
 const { status, value, setValue, refresh } = useRemoteStorage('my-key');
+```
+
+### Access the `remote-storage` instance
+
+```tsx
+import { useRemoteStorageInstance } from 'use-remote-storage';
+
+// within any functional component
+const remoteStorage = useRemoteStorageInstance();
 ```
 
 ## Documentation
